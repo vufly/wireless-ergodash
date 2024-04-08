@@ -12,6 +12,9 @@
 #define LOWER   1
 #define RAISE   2
 
+&led_strip {
+    chain-length = <12>;
+};
 
 / {
         keymap {
