@@ -41,48 +41,6 @@
 &kp  LSHFT     &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &mo  LOWER             &mt  RMETA PG_UP &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  RSHFT
 &kp  LCTRL     &none         &none         &kp  LALT     &kp LMETA     &kp  BSPC     &kp  DEL               &mt  RCTRL PG_DN &kp  SPACE    &mo  RAISE    &kp  LEFT     &kp  DOWN     &kp  UP       &kp  RIGHT
                         >;
-                };
-                lower_layer {
-/* .----------------------------------------------------------------------------------------------------------------------.
- * |      | BT 0 | BT 1 | BT 2 | BT 3 |      | BTCL |                    |      |      |      |      |      |      |      |
- * |------+------+------+------+------+------+------+--------------------+------+------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |                    |      |      |      |      |      |      |      |
- * |------+------+------+------+------+------+------+--------------------+------+------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |                    |      |      |      |      |      |      |      |
- * |------+------+------+------+------+------+---------------------------+------+------+------+------+------+------+------|
- * | Shift| Boot | Reset|      |      |      |      |                    |      |      |      |      |      |      | Shift|
- * |-------------+------+------+------+------+------+------+------+------+------+------+------+------+------+-------------|
- * | Ctlr |      |      |  Win |||||||| Alt  |      | Lower|||||||| Raise|      | RAlt ||||||||      |      |      | RCtrl|
- * .----------------------------------------------------------------------------------------------------------------------.
- */ /* FIXME boot and reset are not yet locale aware */
-                        bindings = <
-&none         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none         &bt BT_CLR             &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans                 &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &tran                  &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &bootloader   &sys_reset    &trans        &trans        &trans        &trans                 &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans                 &trans        &trans        &trans        &trans        &trans        &trans        &trans
-                        >;
-                };
-                raise_layer {
-/* .----------------------------------------------------------------------------------------------------------------------.
- * |  F11 |  F1  |  F2  |  F3  |  F4  |  F5  |  F11 |                    | F12  |  F6  |  F7  |  F8  |  F9  |  F10 |  F12 |
- * |------+------+------+------+------+------+------+--------------------+------+------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |                    |      |      |      |      |      |      |      |
- * |------+------+------+------+------+------+------+--------------------+------+------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |                    |      |      |      |      |      |      |      |
- * |------+------+------+------+------+------+---------------------------+------+------+------+------+------+------+------|
- * | Shift|      |      |      |      |      |      |                    |      |      |      |      | Boot | Reset| Shift|
- * |-------------+------+------+------+------+------+------+------+------+------+------+------+------+------+-------------|
- * | Ctlr |      |      |  Win |||||||| Alt  |      | Lower|||||||| Raise|      | RAlt ||||||||      |      |      | RCtrl|
- * .----------------------------------------------------------------------------------------------------------------------.
- */ /* FIXME boot and reset are not yet locale aware */
-                        bindings = <
-&kp  F11      &kp  F1         &kp  F2         &kp  F3       &kp  F4       &kp  F5       &kp  F11                &kp  F12      &kp  F6       &kp  F7       &kp  F8       &kp  F9       &kp  F10      &kp  F12
-&trans        &rgb_ug RGB_TOG &rgb_ug RGB_EFF &trans        &trans        &trans        &trans                  &none         &kp  HOME     &kp  PG_DN     &kp  PG_UP   &kp  END      &trans        &trans
-&trans        &trans          &trans          &trans        &trans        &trans        &trans                  &none         &kp  LEFT     &kp  DOWN     &kp  UP       &kp  RIGHT    &trans        &trans
-&trans        &trans          &trans          &trans        &trans        &trans        &trans                  &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans          &trans          &trans        &trans        &trans        &trans                  &trans        &trans        &trans        &trans        &trans        &trans        &trans
-                        >;
-                };
+                }
         };
 };
