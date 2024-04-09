@@ -12,9 +12,6 @@
 #define LOWER   1
 #define RAISE   2
 
-&led_strip {
-    chain-length = <12>;
-};
 
 / {
         keymap {
@@ -23,28 +20,28 @@
                 default_layer {
 /* QWERTY
  * .----------------------------------------------------------------------------------------------------------------------.
- * |  `   |   1  |   2  |   3  |   4  |   5  |  -   |                    |  =   |   6  |   7  |   8  |   9  |   0  | Bksp |
+ * |  `   |   1  |   2  |   3  |   4  |   5  |  [   |                    |  ]   |   6  |   7  |   8  |   9  |   0  | PScr |
  * |------+------+------+------+------+------+------+--------------------+------+------+------+------+------+------+------|
- * | Tab  |   Q  |   W  |   E  |   R  |   T  |  [   |                    |  ]   |   Y  |   U  |   I  |   O  |   P  |  \   |
+ * | ESC  |   Q  |   W  |   E  |   R  |   T  |  -   |                    |  =   |   Y  |   U  |   I  |   O  |   P  |  \   |
  * |------+------+------+------+------+------+------+--------------------+------+------+------+------+------+------+------|
- * |CtrlEs|   A  |   S  |   D  |   F  |   G  | PSCRN|                    | Enter|   H  |   J  |   K  |   L  |   ;  |  '   |
+ * | Tab  |   A  |   S  |   D  |   F  |   G  | Del  |                    | Bksp |   H  |   J  |   K  |   L  |   ;  |  '   |
  * |------+------+------+------+------+------+---------------------------+------+------+------+------+------+------+------|
- * | Shift|   Z  |   X  |   C  |   V  |   B  | Lower|                    | PGUP |   N  |   M  |   ,  |   .  |   /  | Shift|
+ * | Shift|   Z  |   X  |   C  |   V  |   B  | End  |                    | Home |   N  |   M  |   ,  |   .  |   /  | Shift|
  * |-------------+------+------+------+------+------+------+------+------+------+------+------+------+------+-------------|
- * | Ctrl |      |      | Alt  |||||||| Win  | Bksp | Del  |||||||| PGDN | Space| Raise|||||||| Left | Down |  Up  | Right|
+ * | Ctrl |      | PGDN | Win  |||||||| Alt  | Space| Lower|||||||| Raise| Enter| RAlt ||||||||      | PGUP | Ins  | RCtrl|
  * .----------------------------------------------------------------------------------------------------------------------.
  */
                         bindings = <
-&kp  GRAVE     &kp  N1       &kp  N2       &kp  N3       &kp  N4       &kp  N5       &kp  MINUS             &kp  EQUAL       &kp  N6       &kp  N7       &kp  N8       &kp  N9       &kp  N0       &kp  BSPC
-&kp  TAB       &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T        &kp  LBKT              &kp  RBKT        &kp  Y        &kp  U        &kp  I        &kp  O        &kp  P        &kp  BSLH
-&mt  LCTRL ESC &kp  A        &kp  S        &kp  D        &kp  F        &kp  G        &kp  PSCRN             &kp  RET         &kp  H        &kp  J        &kp  K        &kp  L        &kp  SEMI     &kp  SQT
-&kp  LSHFT     &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &mo  LOWER             &mt  RMETA PG_UP &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  RSHFT
-&kp  LCTRL     &none         &none         &kp  LALT     &kp LMETA     &kp  BSPC     &kp  DEL               &mt  RCTRL PG_DN &kp  SPACE    &mo  RAISE    &kp  LEFT     &kp  DOWN     &kp  UP       &kp  RIGHT
+&kp  GRAVE    &kp  N1       &kp  N2       &kp  N3       &kp  N4       &kp  N5       &kp  LBKT              &kp  RBKT     &kp  N6       &kp  N7       &kp  N8       &kp  N9       &kp  N0       &kp  PSCRN
+&kp  ESC      &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T        &kp  MINUS             &kp  EQUAL    &kp  Y        &kp  U        &kp  I        &kp  O        &kp  P        &kp  BSLH
+&kp  TAB      &kp  A        &kp  S        &kp  D        &kp  F        &kp  G        &kp  DEL               &kp  BSPC     &kp  H        &kp  J        &kp  K        &kp  L        &kp  SEMI     &kp  SQT
+&kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp  END               &kp  HOME     &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  RSHFT
+&kp  LCTRL    &none         &kp  PG_DN    &kp  LMETA    &kp  LALT     &kp  SPACE    &mo  LOWER             &mo  RAISE    &kp  RET      &kp  RALT     &none         &kp  PG_UP    &kp  INS      &kp  RCTRL
                         >;
                 };
                 lower_layer {
 /* .----------------------------------------------------------------------------------------------------------------------.
- * |      | BT 0 | BT 1 | BT 2 | BT 3 |      | BTCL |                    |      |      |      |      |      |      |      |
+ * |  F11 |  F1  |  F2  |  F3  |  F4  |  F5  |      |                    |      |  F6  |  F7  |  F8  |  F9  |  F10 |  F12 |
  * |------+------+------+------+------+------+------+--------------------+------+------+------+------+------+------+------|
  * |      |      |      |      |      |      |      |                    |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+--------------------+------+------+------+------+------+------+------|
@@ -56,16 +53,16 @@
  * .----------------------------------------------------------------------------------------------------------------------.
  */ /* FIXME boot and reset are not yet locale aware */
                         bindings = <
-&none         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none         &bt BT_CLR             &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans                 &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &tran                  &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &bootloader   &sys_reset    &trans        &trans        &trans        &trans                 &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans                 &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&kp  F11      &kp  F1       &kp  F2       &kp  F3       &kp  F4       &kp  F5       &none                  &none         &kp  F6       &kp  F7       &kp  F8       &kp  F9       &kp  F10      &kp  F12
+&none         &none         &none         &none         &none         &none         &none                  &none         &none         &none         &none         &none         &none         &none
+&none         &none         &none         &none         &none         &none         &none                  &none         &none         &none         &none         &none         &none         &none
+&trans        &bootloader   &sys_reset        &none         &none         &none         &none                  &none         &none         &none         &none         &none         &none         &trans
+&trans        &none         &none         &trans        &trans        &none         &trans                 &trans        &none         &trans        &none         &none         &none         &trans
                         >;
                 };
                 raise_layer {
 /* .----------------------------------------------------------------------------------------------------------------------.
- * |  F11 |  F1  |  F2  |  F3  |  F4  |  F5  |  F11 |                    | F12  |  F6  |  F7  |  F8  |  F9  |  F10 |  F12 |
+ * |      | BT 0 | BT 1 | BT 2 | BT 3 |      | BTCL |                    |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+--------------------+------+------+------+------+------+------+------|
  * |      |      |      |      |      |      |      |                    |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+--------------------+------+------+------+------+------+------+------|
@@ -77,12 +74,13 @@
  * .----------------------------------------------------------------------------------------------------------------------.
  */ /* FIXME boot and reset are not yet locale aware */
                         bindings = <
-&kp  F11      &kp  F1         &kp  F2         &kp  F3       &kp  F4       &kp  F5       &kp  F11                &kp  F12      &kp  F6       &kp  F7       &kp  F8       &kp  F9       &kp  F10      &kp  F12
-&trans        &rgb_ug RGB_TOG &rgb_ug RGB_EFF &trans        &trans        &trans        &trans                  &none         &kp  HOME     &kp  PG_DN    &kp  PG_UP   &kp  END      &trans        &trans
-&trans        &trans          &trans          &trans        &trans        &trans        &trans                  &none         &kp  LEFT     &kp  DOWN     &kp  UP       &kp  RIGHT    &trans        &trans
-&trans        &trans          &trans          &trans        &trans        &trans        &trans                  &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans          &trans          &trans        &trans        &trans        &trans                  &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&none         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none         &bt BT_CLR             &none         &none         &none         &none         &none         &none         &none
+&none         &none         &none         &none         &none         &none         &none                  &none         &none         &none         &none         &none         &none         &none
+&none         &none         &none         &none         &none         &none         &none                  &none         &none         &none         &none         &none         &none         &none
+&trans        &none         &none         &none         &none         &none         &none                  &none         &none         &none         &none         &bootloader   &sys_reset        &trans
+&trans        &none         &none         &trans        &trans        &none         &trans                 &trans        &none         &trans        &none         &none         &none         &trans
                         >;
                 };
         };
 };
+
