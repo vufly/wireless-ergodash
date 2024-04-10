@@ -39,9 +39,9 @@
                         bindings = <
 &kp  GRAVE     &kp  N1       &kp  N2       &kp  N3       &kp  N4       &kp  N5       &kp  MINUS             &kp  EQUAL       &kp  N6       &kp  N7       &kp  N8       &kp  N9       &kp  N0       &kp  BSPC
 &kp  TAB       &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T        &kp  LBKT              &kp  RBKT        &kp  Y        &kp  U        &kp  I        &kp  O        &kp  P        &kp  BSLH
-&mt  LCTRL ESC &kp  A        &kp  S        &kp  D        &kp  F        &kp  G        &kp  PSCRN             &kp  RET         &kp  H        &kp  J        &kp  K        &kp  L        &kp  SEMI     &kp  SQT
+&mt  LCTRL ESC &kp  A        &kp  S        &kp  D        &kp  F        &kp  G        &kp  PSCRN             &lt  LOWER RET   &kp  H        &kp  J        &kp  K        &kp  L        &kp  SEMI     &kp  SQT
 &kp  LSHFT     &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &mo  LOWER             &mt  RMETA PG_UP &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  RSHFT
-&kp  LCTRL     &none         &none         &kp  LALT     &kp LMETA     &kp  BSPC     &kp  DEL               &mt  RCTRL PG_DN &kp  SPACE    &mo  RAISE    &kp  LEFT     &kp  DOWN     &kp  UP       &kp  RIGHT
+&kp  LCTRL     &none         &none         &kp  LALT     &kp LMETA     &kp  BSPC     &mt  LCTRL DEL         &mt  RCTRL PG_DN &kp  SPACE    &mo  RAISE    &kp  LEFT     &kp  DOWN     &kp  UP       &kp  RIGHT
                         >;
                 };
                 lower_layer {
@@ -59,7 +59,7 @@
  */ /* FIXME boot and reset are not yet locale aware */
                         bindings = <
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans        &bt BT_CLR             &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&out OUT_TOG  &out OUT_USB  &out OUT_BLE  &trans        &trans        &trans        &trans                 &trans        &soft_off     &trans        &trans        &trans        &trans        &trans
+&out OUT_TOG  &out OUT_USB  &out OUT_BLE  &trans        &trans        &trans        &trans                 &trans        &trans        &trans        &trans        &soft_off     &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans                 &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &bootloader   &sys_reset    &trans        &trans        &trans        &trans                 &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans                 &trans        &trans        &trans        &trans        &trans        &trans        &trans
@@ -83,7 +83,7 @@
 &trans        &rgb_ug RGB_TOG &rgb_ug RGB_EFF &trans        &trans        &trans        &trans                  &none         &kp  HOME     &kp  PG_DN    &kp  PG_UP    &kp  END      &trans        &trans
 &trans        &trans          &trans          &trans        &trans        &trans        &trans                  &none         &kp  LEFT     &kp  DOWN     &kp  UP       &kp  RIGHT    &trans        &trans
 &trans        &trans          &trans          &trans        &trans        &trans        &trans                  &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans          &trans          &trans        &trans        &trans        &trans                  &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans          &trans          &trans        &trans        &kp  DEL      &trans                  &trans        &trans        &trans        &trans        &trans        &trans        &trans
                         >;
                 };
         };
