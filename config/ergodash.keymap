@@ -10,10 +10,6 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
-#define DEFAULT 0
-#define LOWER   1
-#define RAISE   2
-
 &led_strip { chain-length = <12>; };
 
 / {
@@ -44,6 +40,18 @@
             #binding-cells = <0>;
             bindings = <&kp EQUAL &kp GT>;
             label = "ARROW_FUNC";
+        };
+
+        pair: pair {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings
+                = <&macro_param_1to1>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
+                , <&macro_param_2to2>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
+                , <&macro_tap &kp LEFT>
+                ;
         };
     };
 
