@@ -35,21 +35,21 @@
 
         tp_par: tp_par {
             compatible = "zmk,behavior-tap-dance";
-            label = "TP_PAR";
+            label = "TAP PAIR PARENTHESIS";
             #binding-cells = <0>;
             bindings = <&kp LPAR>, <&pair LPAR RPAR>;
         };
 
         tp_bkt: tp_bkt {
             compatible = "zmk,behavior-tap-dance";
-            label = "TP_BKT";
+            label = "TAP PAIR BRACKET";
             #binding-cells = <0>;
             bindings = <&kp LBKT>, <&pair LEFT_BRACKET RBKT>;
         };
 
         tp_brc: tp_brc {
             compatible = "zmk,behavior-tap-dance";
-            label = "TP_BRC";
+            label = "TAP PAIR BRACE";
             #binding-cells = <0>;
             bindings = <&kp LBRC>, <&pair LBRC RBRC>;
         };
@@ -111,7 +111,7 @@
 &trans  &kp F1                &kp F2    &kp F3     &kp F4     &kp F5     &kp F11                  &kp F12  &kp F6      &kp F7        &kp F8        &kp F9             &kp F10           &trans
 &trans  &kp DQT               &kp AMPS  &kp ASTRK  &kp EQUAL  &kp PLUS   &trans                   &trans   &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &mt C_PREV C_NEXT  &kp C_PLAY_PAUSE  &trans
 &trans  &mt DQT SINGLE_QUOTE  &tp_bkt   &tp_brc    &tp_par    &kp MINUS  &trans                   &trans   &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT          &arrow_func       &trans
-&trans  &mt BSLH PIPE         &kp LBKT  &kp RBRC   &kp RPAR   &kp UNDER           &trans  &trans           &kp HOME    &kp PG_DN     &kp PG_UP     &kp END            &trans            &trans
+&trans  &mt BSLH PIPE         &kp RBKT  &kp RBRC   &kp RPAR   &kp UNDER           &trans  &trans           &kp HOME    &kp PG_DN     &kp PG_UP     &kp END            &trans            &trans
 &trans  &trans                &trans    &trans     &trans                &kp DEL  &trans  &trans  &trans               &trans        &trans        &trans             &trans            &trans
             >;
 
@@ -120,11 +120,11 @@
 
         lower_layer {
             bindings = <
-&trans  &trans           &trans        &trans           &trans           &trans           &trans                  &trans  &trans     &trans  &trans  &trans  &trans     &trans
-&trans  &rgb_ug RGB_SPD  &out OUT_USB  &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_SPI  &trans                  &trans  &kp MINUS  &kp N7  &kp N8  &kp N9  &kp SLASH  &trans
-&trans  &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &trans                  &trans  &kp PLUS   &kp N4  &kp N5  &kp N6  &kp ASTRK  &trans
-&trans  &bootloader      &sys_reset    &bt BT_CLR       &trans           &out OUT_BLE             &trans  &trans          &kp DOT    &kp N1  &kp N2  &kp N3  &kp RET    &trans
-&trans  &trans           &trans        &trans           &trans                            &trans  &trans  &trans  &trans             &kp N0  &trans  &trans  &trans     &trans
+&soft_off  &trans           &trans        &trans           &trans           &trans           &trans                  &trans  &trans     &trans  &trans  &trans  &trans     &soft_off
+&trans     &rgb_ug RGB_SPD  &out OUT_USB  &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_SPI  &trans                  &trans  &kp MINUS  &kp N7  &kp N8  &kp N9  &kp SLASH  &trans
+&trans     &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &trans                  &trans  &kp PLUS   &kp N4  &kp N5  &kp N6  &kp ASTRK  &trans
+&trans     &bootloader      &sys_reset    &bt BT_CLR       &trans           &out OUT_BLE             &trans  &trans          &kp DOT    &kp N1  &kp N2  &kp N3  &kp RET    &trans
+&trans     &trans           &trans        &trans           &trans                            &trans  &trans  &trans  &trans             &kp N0  &trans  &trans  &trans     &trans
             >;
 
             label = "LOWER";
