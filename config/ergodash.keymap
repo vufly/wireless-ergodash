@@ -23,7 +23,12 @@
 
         combo_enter {
             bindings = <&kp RET>;
-            key-positions = <39 40>;
+            key-positions = <39>;
+        };
+
+        combo_tab {
+            bindings = <&mt LA(TAB) TAB>;
+            key-positions = <37 38>;
         };
     };
 
