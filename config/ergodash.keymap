@@ -23,7 +23,7 @@
 
         combo_enter {
             bindings = <&kp RET>;
-            key-positions = <39>;
+            key-positions = <39 38>;
         };
 
         combo_tab {
