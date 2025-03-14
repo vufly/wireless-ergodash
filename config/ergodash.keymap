@@ -113,7 +113,7 @@
 &kp LCTRL        &mt LC(LSHFT) HOME  &mt LA(LSHFT) END  &kp LALT  &kp LGUI          &ht LCTRL BSPC  &lt 2 DEL  &mt RCTRL RET  &kp SPACE           &lt 1 TAB  &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT
             >;
 
-            label = "DEFAULT";
+            label = "QWERTY";
         };
 
         raise_layer {
@@ -130,11 +130,11 @@
 
         lower_layer {
             bindings = <
-&soft_off  &trans           &trans        &trans           &trans           &trans           &trans                  &trans  &trans     &trans  &trans  &trans  &trans     &soft_off
-&trans     &rgb_ug RGB_SPD  &out OUT_USB  &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_SPI  &trans                  &trans  &kp MINUS  &kp N7  &kp N8  &kp N9  &kp SLASH  &trans
-&trans     &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &trans                  &trans  &kp PLUS   &kp N4  &kp N5  &kp N6  &kp ASTRK  &trans
-&trans     &bootloader      &sys_reset    &bt BT_CLR       &trans           &out OUT_BLE             &trans  &trans          &kp DOT    &kp N1  &kp N2  &kp N3  &kp RET    &trans
-&trans     &trans           &trans        &trans           &trans                            &trans  &trans  &trans  &trans             &kp N0  &trans  &trans  &trans     &trans
+&soft_off  &trans           &trans        &trans           &trans           &trans           &trans                    &trans  &trans     &trans  &trans  &trans  &trans     &soft_off
+&trans     &rgb_ug RGB_SPD  &out OUT_USB  &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_SPI  &trans                    &trans  &kp MINUS  &kp N7  &kp N8  &kp N9  &kp SLASH  &trans
+&trans     &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &trans                    &trans  &kp PLUS   &kp N4  &kp N5  &kp N6  &kp ASTRK  &trans
+&trans     &bootloader      &sys_reset    &bt BT_CLR       &trans           &out OUT_BLE             &trans  &trans            &kp DOT    &kp N1  &kp N2  &kp N3  &kp RET    &trans
+&trans     &trans           &trans        &trans           &trans                            &trans  &trans  &kp BSPC  &trans             &kp N0  &trans  &trans  &trans     &trans
             >;
 
             label = "LOWER";
